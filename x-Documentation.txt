@@ -1,0 +1,4 @@
+https://accounts.zoho.com/oauth/v2/token?code=1000.a6763bfa477f48999facdcc2c89b5080.df161fa60bb70dba01c3c92c0990e47a&client_id=1000.UYPMTEYYC7JWJ770S1TD2LR8FNU71R&client_secret=034bfb68deb00e29ddf80ce6047ec6df5f3a3dd9a3&redirect_uri=http://www.zoho.com/invoice&grant_type=authorization_code
+
+ "access_token": "1000.6606bb0bfbcc96f578084a4c1e9f63cc.8926ec2cd6a7cc1680d89209b6dcd4ac",
+ "refresh_token": "1000.4d8f8ec9c50cd99f160004e45ecd6ffd.837b109edb1947ba790d5497b749ea65",

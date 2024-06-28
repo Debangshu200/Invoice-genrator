@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <title>Invoice</title>
+        <!-- <style></style> //stylesheet -->
+    </head>
+
+<body>
+    <div>
+        <img src="./assets/logo.png" alt="Company Logo" />
+        <h1>Tax Invoice/Bill of Supply/Cash Memo</h1>
+        <p>Original for Recipient</p>
+        <p>Sold By: <% = sellerDetails.name %> </p>
+        <p> <%= sellerDetails.address %>, <% = sellerDetails.city %>, <% = sellerDetails.state %> - <% = sellerDetails.pincode %> </p>
+        <p>PAN No: <% sellerDetails.panNO %></p>
+        <p>GST Registration No: <% = sellerDetails.gstNo %></p>
+
+        <p>Billing Address: <% =billingDetails.name %></p>
+        <p> <% =billingDetails.address %>, <% billingDetails.city %>, <% = billingDetails.state %> - <% = billingDetails.pincode %></p>
+
+        <p>Shipping Address: <% =shippingDetails.name %></p>
+        <p> <% =shippingDetails.address %>, <% shippingDetails.city %>, <% = shippingDetails.state %> - <% = shippingDetails.pincode %></p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>s1.No</th>
+                    <th>Description</th>
+                    <th>Unit Price</th>
+                    <th>Qty</th>
+                    <th>Net Amount</th>
+                    <th>Tax Rate</th>
+                    <th>Tax Amount</th>
+                    <th>Total Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% items.forEach((item, index) => {
+                    %>
+                    <tr>
+                    <td><%= index + 1 %></td>    
+                    <td><%= item.description %></td>
+                    <td><%= item.unit_price %></td>
+                    <td><%= item.quantity %></td>
+                    <td><%= item.unit_price * item.quantity - item.discount %></td>
+                    <td><%= item.tax_rate %></td>
+                    <td><%= (item.unit_price * item.quantity - item.discount) * item.tax_rate / 100 %></td>
+                    <td><%= (item.unit_price * item.quantity - item.discount) * (1 + item.tax_rate / 100) %></td>
+                    </tr>
+                 <% }) %>
+            </tbody>
+        </table>
+
+        <p>For <%= sellerDetails.name %>:</p>
+        <img src="<%= "C:\Users\Hp\Downloads\Screenshots\1.png" %>" alt="Signature" /> //I used local image
+        <p>Authorized Signatory</p>
+    </div>
+</body>
+</html>
