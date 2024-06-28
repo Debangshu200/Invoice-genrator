@@ -11,7 +11,7 @@ Configure environment variables
 
 Create a .env file in the root directory and add your Zoho credentials and other configuration details:
 
-ZOHO_REFRESH_TOKEN=your_refresh_token,
+ZOHO_REFRESH_TOKEN=your_refresh_token,/n
 ZOHO_CLIENT_ID=your_client_id,
 ZOHO_CLIENT_SECRET=your_client_secret,
 ZOHO_ORGANIZATION_ID=your_organization_id,
